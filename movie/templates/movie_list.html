@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Movie List</h1>
+  <ul>
+    {% for movie in movies %}
+      <li>{{ movie.title }} ({{ movie.release_date }})</li>
+    {% endfor %}
+  </ul>
+  <p><a href="{% url 'create_movie' %}">Create New Movie</a></p>
+{% endblock %}

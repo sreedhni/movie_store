@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Actor List</h1>
+  <ul>
+    {% for actor in actors %}
+      <li>{{ actor.first_name }} {{ actor.last_name }}</li>
+    {% endfor %}
+  </ul>
+  <p><a href="{% url 'create_actor' %}">Create New Actor</a></p>
+{% endblock %}
